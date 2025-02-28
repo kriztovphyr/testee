@@ -21,35 +21,35 @@ public static String OldPhonePad(string input) {
               
                 if (currentKey == '2')
                 {
-                    outputText += "abc"[(pressCount - 1) % 3];
+                    outputText += "ABC"[(pressCount - 1) % 3];
                 }
                 else if (currentKey == '3')
                 {
-                    outputText += "def"[(pressCount - 1) % 3];
+                    outputText += "DEF"[(pressCount - 1) % 3];
                 }
                 else if (currentKey == '4')
                 {
-                    outputText += "ghi"[(pressCount - 1) % 3];
+                    outputText += "GHI"[(pressCount - 1) % 3];
                 }
                 else if (currentKey == '5')
                 {
-                    outputText += "jkl"[(pressCount - 1) % 3];
+                    outputText += "JKL"[(pressCount - 1) % 3];
                 }
                 else if (currentKey == '6')
                 {
-                    outputText += "mno"[(pressCount - 1) % 3];
+                    outputText += "MNO"[(pressCount - 1) % 3];
                 }
                 else if (currentKey == '7')
                 {
-                    outputText += "pqrs"[(pressCount - 1) % 4];
+                    outputText += "PQRS"[(pressCount - 1) % 4];
                 }
                 else if (currentKey == '8')
                 {
-                    outputText += "tuv"[(pressCount - 1) % 3];
+                    outputText += "TUV"[(pressCount - 1) % 3];
                 }
                 else if (currentKey == '9')
                 {
-                    outputText += "wxyz"[(pressCount - 1) % 4];
+                    outputText += "WXYZ"[(pressCount - 1) % 4];
                 }
                 else if (currentKey == '0')
                 {
