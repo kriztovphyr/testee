@@ -136,6 +136,35 @@ canvas#canvasforestbg {
     background-size: 100%;
     opacity: .3;
 }
+canvas#boiled_one {
+    background-image: url(https://raw.githubusercontent.com/kriztovphyr/testee/refs/heads/main/boiled%20one.webp);
+    background-repeat: no-repeat;
+   	width: 40%;
+    height: 85%;
+    left: 45px;
+}
+canvas#boiled_one_hiding {
+    background-image: url(https://raw.githubusercontent.com/kriztovphyr/testee/refs/heads/main/boiled%20one.webp);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    filter: brightness(0.5);
+    width: 8%;
+    height: 17%;
+    position: absolute;
+    top: 80%;
+    z-index: -1;
+    left: 6%;
+}
+#bclickarea{
+
+	width: 8%;
+    height: 17%;
+    position: absolute;
+    top: 80%;
+    left: 6%;
+	z-index: 100;
+
+}
 
 
 <!--clouds anumation-->
@@ -216,6 +245,10 @@ html, body {
 </head>
 
   <audio id="stormaudio" autoplay="autoplay" src="https://cdn.shopify.com/s/files/1/0589/5428/5240/t/1/assets/EPIC_THUNDER_RAIN___Rainstorm_Sounds_For_Relaxin.mp3?v=1627758722" type="audio/mpeg"></audio>
+  <audio id="horroraudio" autoplay="autoplay" src="https://github.com/kriztovphyr/testee/raw/refs/heads/main/horror-background-atmosphere-156462.mp3" type="audio/mpeg"></audio>
+  <audio id="screamaudio" autoplay="autoplay" src="https://github.com/kriztovphyr/testee/raw/refs/heads/main/scream-noise-142446.mp3" type="audio/mpeg"></audio>
+  
+  
 <div id="controlsdiv">
 <input id="playstorm" value="click to play BG storm" onclick="play1()">
 <input id="pausestorm" value="click to stop BG storm" onclick="play1pause()">
@@ -230,6 +263,9 @@ html, body {
   <canvas id="canvas3" width="100%" height="100%"></canvas>
   <canvas id="canvasfence" width="100%" height="100%"></canvas>
   <canvas id="canvas4" width="100%" height="100%"></canvas>
+  <canvas id="boiled_one" width="100%" height="100%" style="display:none;"></canvas>
+  <div id="bclickarea" onclick="scream()"></div>
+  <canvas id="boiled_one_hiding" width="100%" height="100%"></canvas>
   <canvas id="canvasforestbg" width="100%" height="100%"></canvas>
   
   
@@ -244,11 +280,26 @@ html, body {
   
       <script id="rendered-js">
 
+function scream(){
+	var screamer = document.getElementById("screamaudio");
+	var show_boild_one = document.getElementById("boiled_one");
+   
+	show_boild_one.style.display = "block";
+	//alert (show_boild_one.style.display);
+	screamer.play();
+	screamer.volume = "1";
+
+}
+
 
 function play1() {
         var audio1 = document.getElementById("stormaudio");
+		var audio2 = document.getElementById("horroraudio");
         audio1.play();
+		audio2.play();
         audio1.volume = 0.2;
+		audio2.volume = 0.5;
+		//alert("Warning not for the fainted heart!");
       }
 function play1pause() {
         var audio1 = document.getElementById("stormaudio");
