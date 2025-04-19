@@ -2,7 +2,7 @@
 
 <head>
   <meta charset="UTF-8">
- 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
    
 
@@ -139,9 +139,11 @@ canvas#canvasforestbg {
 canvas#boiled_one {
     background-image: url(https://raw.githubusercontent.com/kriztovphyr/testee/refs/heads/main/boiled%20one.webp);
     background-repeat: no-repeat;
-   	width: 40%;
     height: 85%;
     left: 45px;
+	position: absolute;
+    z-index: 100;
+
 }
 canvas#boiled_one_hiding {
     background-image: url(https://raw.githubusercontent.com/kriztovphyr/testee/refs/heads/main/boiled%20one.webp);
@@ -166,7 +168,19 @@ canvas#boiled_one_hiding {
 
 }
 
+@media only screen and (max-width: 600px) {
+	canvas {
+		height: 60%!important;
+	}
+	#bclickarea, canvas#boiled_one_hiding{
+		top:25%!important;
+	}
+	canvas#canvas4{
+		background-size: 100%;
+		background-position: bottom;
+	}
 
+}
 
 
 
